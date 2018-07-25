@@ -21,6 +21,8 @@ main() {
     cross rustc --bin hello_world --target $TARGET --release -- -C lto
 
     # TODO Update this to package the right artifacts
+    echo $TRAVIS_OS_NAME
+    ls target/$TARGET/release/
     cp target/$TARGET/release/hello_world $stage/
 
     cd $stage
